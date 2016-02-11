@@ -1,0 +1,128 @@
+body {
+  text-align: center;
+  padding-top: 150px;
+}
+
+.content {
+  display: inline-block;
+}
+
+
+#homepage-grid {
+    width:910px;
+    position:relative;
+    padding:0;
+    overflow: hidden;
+}
+
+#homepage-grid li {
+    list-style:none;
+    float:left;
+    padding:0 12px 12px 0;
+    display:block;
+}
+
+#homepage-grid li:hover{
+  animation-name: bounce;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+
+}
+#homepage-grid li.col2.row4.sizex2.sizey1.last{
+    background-color: #865f8c;
+    background-clip: padding-box;
+    margin-bottom: -12px;
+    width: 602px;
+    height: 160px;
+}
+
+img[title="img"] {
+  margin-right: 25px;
+  margin-top: 38px;
+  margin-left: 25px;
+}
+
+#homepage-grid li.last {
+    list-style:none;
+    float:right;
+    padding:0 0 12px 0;
+}
+
+#homepage-grid li a {
+    display:block;
+}
+
+#homepage-grid li.col1:not(.row1):not(.row2) {
+    position: absolute;
+}
+#homepage-grid li.col1.sizey1.row1 ~ li.col1.row2 {
+    top: 172px;
+}
+#homepage-grid li.col1.sizey2.row1 ~ li.col1.row2{
+    top: 342px;
+}
+#homepage-grid li.col1.sizey1.row1 ~ li.col1.sizey1.row2 ~ li.col1.row3 {
+    top: 344px;
+}
+#homepage-grid li.col1.sizey2.row1 ~ li.col1.sizey2.row2 ~ li.col1.row3{
+    top: 684px;
+}
+#homepage-grid li.col1.sizey2.row1 ~ li.col1.sizey1.row2 ~ li.col1.row3{
+    top: 514px;
+}
+
+@keyframes bounce {
+  from, 20%, 53%, 80%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transform: translate3d(0,0,0);
+  }
+
+  40%, 43% {
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    transform: translate3d(0,-4px,0);
+  }
+}
+
+.bounce {
+  animation-name: bounce;
+  transform-origin: center bottom;
+}
+
+@keyframes tada {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  10%, 20% {
+    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%, 50%, 70%, 90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%, 60%, 80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.tada {
+  animation-name: tada;
+}
+
+#title10 {
+  background-color: white;
+}
